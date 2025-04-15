@@ -25,10 +25,11 @@ button {
 
 button:hover {
     box-shadow: 0 0 2px 2px green;
-
 }
 
+.button-pressed,
 button:active {
+    box-shadow: 0 0 2px 2px green;
     transform: translateY(2px);
 }
 
@@ -78,6 +79,12 @@ input:focus {
 
 .box {
     font-family: monospace;
+    font-size: large;
+    text-shadow:
+        1px 0 1px black,
+        -1px 0 1px black,
+        0px 1px black,
+        0px -1px black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,4 +92,22 @@ input:focus {
     height: 120px;
     margin: 10px;
     border: 1px solid green;
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+}
+
+.box.fading-out {
+    opacity: 0;
+}
+
+.box:hover {
+    box-shadow: 0 0 2px 2px green;
+}
+
+.x-y-display {
+    font-size: small;
+}
+
+.id-display {
+    font-size: large;
 }
