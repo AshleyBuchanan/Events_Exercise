@@ -1,3 +1,5 @@
+/* step 4b -> I just couldn't leave the nonreactive elements the way they were */
+
 * {
     font-family: monospace;
     font-size: 12px;
@@ -5,6 +7,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border-radius: 2px;
 }
 
 body {
@@ -20,6 +23,15 @@ button {
     background-color: black;
 }
 
+button:hover {
+    box-shadow: 0 0 2px 2px green;
+
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
 label {
     border: 1px solid green;
     padding: 10px;
@@ -32,6 +44,23 @@ input {
     border: 1px solid green;
     outline: none;
     background-color: black;
+    caret-color: green;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 1000px #000 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+input:-webkit-autofill:focus {
+    box-shadow: 0 0 2px 2px green, 0 0 0 1000px #000 inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+input:focus {
+    box-shadow: 0 0 2px 2px green;
 }
 
 #new-box-button {
